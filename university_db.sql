@@ -52,3 +52,19 @@ WHERE `id`= 58;
 -- 11. Eliminare dalla tabella studenti il record creato precedentemente al punto 9
 DELETE FROM `students`
 WHERE `id` = 5001;
+
+
+-- ! ----- ESERCIZIO GROUP BY ------
+--1. Contare quanti iscritti ci sono stati ogni anno
+SELECT COUNT(*) AS `numero_di_iscrizioni`, YEAR(`enrolment_date`) AS `anno_di_iscrizione`
+FROM `students`
+GROUP BY `anno_di_iscrizione`;
+
+-- 2. Contare gli insegnanti che hanno l'ufficio nello stesso edificio
+SELECT COUNT(*) AS `insegnanti_per_ufficio`, `office_address` AS `indirizzo_ufficio`
+FROM `teachers`
+GROUP BY `indirizzo_ufficio`;
+
+-- 3. Calcolare la media dei voti di ogni appello d'esame
+
+-- 4. Contare quanti corsi di laurea ci sono per ogni dipartimento
