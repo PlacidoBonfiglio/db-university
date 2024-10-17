@@ -93,7 +93,7 @@ WHERE `departments`.`name` = "Dipartimento di Neuroscienze"
 AND `degrees`.`name` LIKE("% Magistrale %");
 
 -- 3. Selezionare tutti i corsi in cui insegna Fulvio Amato (id=44)
-SELECT `teachers`.`name` AS `nome_insegnate`, `teachers`.`surname` AS `nome_insegnate`, `course_teacher`.`course_id` 
+SELECT `teachers`.`name` AS `nome_insegnate`, `teachers`.`surname` AS `cognome_insegnate`, `course_teacher`.`course_id` 
 FROM `teachers` 
 INNER JOIN `course_teacher`
 ON `course_teacher`.`teacher_id` = `teachers`.`id`
